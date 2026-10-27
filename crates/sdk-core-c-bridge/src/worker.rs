@@ -1375,9 +1375,7 @@ impl TryFrom<&TunerHolder> for temporalio_sdk_core::TunerHolder {
     }
 }
 
-impl<SK: SlotKind> TryFrom<SlotSupplier>
-    for temporalio_sdk_core::SlotSupplierOptions<SK>
-{
+impl<SK: SlotKind> TryFrom<SlotSupplier> for temporalio_sdk_core::SlotSupplierOptions<SK> {
     type Error = anyhow::Error;
 
     fn try_from(

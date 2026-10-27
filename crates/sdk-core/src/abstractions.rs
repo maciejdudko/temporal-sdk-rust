@@ -477,9 +477,7 @@ pub(crate) mod tests {
     };
     use futures_util::FutureExt;
 
-    pub(crate) fn fixed_size_permit_dealer<SK: SlotKind>(
-        size: usize,
-    ) -> MeteredPermitDealer<SK> {
+    pub(crate) fn fixed_size_permit_dealer<SK: SlotKind>(size: usize) -> MeteredPermitDealer<SK> {
         MeteredPermitDealer::new(
             Arc::new(FixedSizeSlotSupplier::new(size)),
             MetricsContext::no_op(),
